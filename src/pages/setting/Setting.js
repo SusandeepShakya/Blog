@@ -42,3 +42,5 @@ export const Setting = () => {
     </div>
     )
 }
+
+export default Setting;
