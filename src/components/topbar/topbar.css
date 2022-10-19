@@ -1,7 +1,7 @@
 .top {
   width: 100%;
-  height: 50px;
-  background-color: Grey;
+  height: 55px;
+  background-image: linear-gradient(lightblue,white,lightgrey);
   position: sticky;
   top: 0;
   display: flex;
@@ -21,7 +21,7 @@
 .topIcon {
   font-size: 20px;
   margin-right: 10px;
-  color: #444;
+  color: black;
   cursor: pointer;
 }
 
@@ -45,8 +45,8 @@
 }
 
 .topListItem:hover{
-    color: gray;
-}
+    color: gra;
+}y
 
 .topImg {
   width: 40px;

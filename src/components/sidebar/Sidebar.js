@@ -1,11 +1,11 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import "./sidebar.css";
-import axios from 'axios';
 import { Link } from "react-router-dom";
-
+import "./sidebar.css";
 
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
+
   useEffect(() => {
     const getCats = async () => {
       const res = await axios.get("/categories");
@@ -13,18 +13,16 @@ export default function Sidebar() {
     };
     getCats();
   }, []);
-
   return (
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://imgs.search.brave.com/bOKdC6F2w9g0b6a1Bo75ZCgLm8wRzC7fbrziKQWdd4U/rs:fit:667:669:1/g:ce/aHR0cHM6Ly9pbWdz/LmllL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA4L2dvdmVy/bm1lbnQtZTE1OTc5/MTY5MjkxOTAuanBn"
+          src="https://imgs.search.brave.com/ljOxLUuakVuw2r3VXs9ir91rELqQRJfUiOG7KLaUQmc/rs:fit:615:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC52/dm1wV3QwcUJ1M0xl/QmdadVVmbUdBSGFG/dCZwaWQ9QXBp"
           alt=""
         />
         <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
+          Beginner Trying to learn ReactJs and nodeJs So, That i Can Create awesome Websites that and innovative and beautiful. Which Give user a smooth and user friendly Experience when browsing the Website.
         </p>
       </div>
       <div className="sidebarItem">
@@ -32,11 +30,8 @@ export default function Sidebar() {
         <ul className="sidebarList">
           {cats.map((c) => (
             <Link to={`/?cat=${c.name}`} className="link">
-              <li className="sidebarListItem">
-                {c.name}
-              </li>
+              <li className="sidebarListItem">{c.name}</li>
             </Link>
-
           ))}
         </ul>
       </div>
@@ -44,9 +39,9 @@ export default function Sidebar() {
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-square"></i>
-          <i className="sidebarIcon fab fa-instagram-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
           <i className="sidebarIcon fab fa-twitter-square"></i>
+          <i className="sidebarIcon fab fa-pinterest-square"></i>
+          <i className="sidebarIcon fab fa-instagram-square"></i>
         </div>
       </div>
     </div>

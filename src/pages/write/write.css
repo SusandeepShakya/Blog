@@ -1,4 +1,5 @@
 .write {
+    margin-top: 100px;
     padding-top: 50px;
   }
   
@@ -35,9 +36,10 @@
   
   .writeInput {
     font-size: 30px;
-    border: none;
+    border: 1px solid;
     padding: 20px;
     width: 70vw;
+    margin-top: 25px;
   }
   
   .writeInput::placeholder {
@@ -50,8 +52,8 @@
   }
   
   .writeText {
-    width: 70vw;
-    height: 100vh;
+    width: 72vw;
+    height: 100px;
     font-family: inherit;
     font-size: 20px;
   }
@@ -65,8 +67,9 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    display: flex;
     align-items: center;
+    padding: 20px;
+    
   }

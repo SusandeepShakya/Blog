@@ -4,7 +4,7 @@ import Homepage from "./pages/homepage/Homepage";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Write from "./pages/write/Write";
-import Settings, { Setting } from "./pages/setting/Setting";
+import Settings from "./pages/setting/Setting";
 import Single from "./pages/single/Single";
 import { useContext } from "react";
 import { Context } from "./context/Context";
@@ -18,10 +18,10 @@ function App() {
         <Topbar />
         <Routes>
           <Route exact path='/' element={<Homepage />} />
-          <Route exact path='/register' element={user?<Homepage/>:<Register />} />
+          <Route exact path='/register' element={user?<Homepage/>:<Login />} />
           <Route exact path='/login' element={user?<Homepage/>:<Login />} />
-          <Route exact path='/write' element={user?<Write/>:<Register />} />
-          <Route exact path='/settings'  element={user?<Setting/>:<Register />} />
+          <Route exact path='/write' element={user?<Write/>:<Login/>} />
+          <Route exact path='/settings'  element={user?<Setting/>:<Login />} />
           <Route exact path='/post/:postId' element={<Single/>} />
         </Routes>
       </Router>

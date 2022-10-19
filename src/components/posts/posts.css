@@ -3,5 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-radius: 5%;
 }
 
